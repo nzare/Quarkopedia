@@ -17,11 +17,21 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="{% static 'css/signup.css' %}">
-
+<style>
+      h4{
+  color: white;
+  font-family: Raleway;
+  text-align: center;
+}
+img{
+    height:45px;
+    width:180px;
+}
+</style>
 </head>
 <body>
     <ul>
-<li style="float: left;"><a href="#"><b>Quarkopedia</b></a></li>
+<li style="float: left;"><a href="#"><b><img src="{% static 'image/logo.jpeg' %}"></b></a></li>
   
   
 </ul>
@@ -77,9 +87,11 @@
             </div>
                     <br>
                 <br>    
-    </form></div>
+    </form>
+    
 </div>
-
+</div>
+<footer><h4>A DOCW Original</h4></footer>
 {% if message %}
     <script type="text/javascript">alert('{{ message }}');</script>
 {% endif %}
