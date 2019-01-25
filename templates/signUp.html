@@ -24,8 +24,8 @@
   text-align: center;
 }
 img{
-    height:45px;
-    width:180px;
+    height:60px;
+    width:220px;
 }
 </style>
 </head>
@@ -53,17 +53,17 @@ img{
         
         <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" name="email" class="form-control" placeholder="Email Id"required>
+            <input type="email" name="email" class="form-control" placeholder="Email Id (Use BITS Email if BITSIAN)"required>
             </div>
         
         <div class="form-group">
             <label for="password">Password :</label>
-            <input type="password" name="pass" class="form-control" placeholder="Password"required>
+            <input type="password" name="pass" class="form-control" placeholder="Password(Min 6 charachters long)"required>
             
         </div>
             <div class="form-group">
             <label for="password">Confirm Password :</label>
-            <input type="password" name="pass" class="form-control" placeholder="Password"required>
+            <input type="password" name="pass" class="form-control" placeholder="Password(Min 6 charachters long)"required>
             
         </div>
                 
@@ -91,7 +91,7 @@ img{
     
 </div>
 </div>
-<footer><h4>A DOCW Original</h4></footer>
+<footer><h4>A DoCW Original</h4></footer>
 {% if message %}
     <script type="text/javascript">alert('{{ message }}');</script>
 {% endif %}
