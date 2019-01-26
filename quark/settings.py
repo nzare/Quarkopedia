@@ -22,7 +22,7 @@ SECRET_KEY = 'c$wzm6lindhp1)z91843*4&t1_%vnpgf8%v%wdh)6#8h2vt@#^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['quarkopedia.us-east-2.elasticbeanstalk.com','127.0.0.1']
+ALLOWED_HOSTS = ['quarkopedia.us-east-2.elasticbeanstalk.com','127.0.0.1','www.quarkopedia.in','quarkopedia.in']
 
 
 # Application definition

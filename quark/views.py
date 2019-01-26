@@ -96,12 +96,12 @@ def signUp(request):
         name=request.POST.get('name')
         email=request.POST.get('email')
         passw=request.POST.get('pass')
-        conf_passw=request.POST.get('pass')
-        
+        conf_passw=request.POST.get('conf_pass')
         phone=request.POST.get('phone')
         college=request.POST.get('college')
         city=request.POST.get('city')
-
+        print(passw)
+        print(conf_passw)
         if passw!=conf_passw:
             message="Password does not match"
             return render(request,'signUp.html',{"message":message})
@@ -120,14 +120,13 @@ def signUp(request):
                     if phone==temp['phone']:
                         message="Phone Number Already Exists"
                         return render(request,'signUp.html', {"message":message})
-                    else:
-                        user=auth.create_user_with_email_and_password(email,passw)
-                        uid = user['localId']
-                        data={'name':name,'email':email,'phone': phone, 'college':college,'city':city,'accBal': DEFAULT_BAL, 'rank': 0,'user_verify':"No"}
-                        database.child("users").child(uid).set(data)
-                        auth.send_email_verification(user['idToken'])
-                        return render(request,"verification.html")
-        
+
+                user=auth.create_user_with_email_and_password(email,passw)
+                uid = user['localId']
+                data={'name':name,'email':email,'phone': phone, 'college':college,'city':city,'accBal': DEFAULT_BAL, 'rank': 0,'user_verify':"No"}
+                database.child("users").child(uid).set(data)
+                auth.send_email_verification(user['idToken'])
+                return render(request,"verification.html")
         message="could not create account"
         return render(request,'signUp.html', {"message":message})
 
