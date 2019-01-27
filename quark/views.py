@@ -20,7 +20,7 @@ auth = firebase.auth()
 database = firebase.database()
 authy_api= AuthyApiClient("8x9UksoV9DMM6T1fzMD1tFxayRLrkQnX"
 )
-DEFAULT_BAL = 100
+DEFAULT_BAL = 1000000
 
 def signIn(request):
     if request.method == 'POST':
@@ -102,14 +102,25 @@ def signUp(request):
         city=request.POST.get('city')
         print(passw)
         print(conf_passw)
+
         if passw!=conf_passw:
             message="Password does not match"
             return render(request,'signUp.html',{"message":message})
-        else:                    
+        elif len(passw)<6:
+            message="Password Should be min 6 charachters long"
+            return render(request,'signUp.html',{"message":message})
+        else:
+            emailDB = database.child("users").get()
+            for i in emailDB.each():
+                temp2 = i.val()
+                if email==temp2['email']:
+                    message="Email Already Exists"
+                    return render(request,'signUp.html',{"message":message})
+                             
             if "@goa.bits-pilani.ac.in" in email:
                 user=auth.create_user_with_email_and_password(email,passw)
                 uid = user['localId']
-                data={'name':name,'email':email,'phone': phone, 'college':college,'city':city,'accBal': DEFAULT_BAL, 'rank': 0,'user_verify':"Yes"}
+                data={'name':name,'email':email,'phone': phone, 'college':college,'city':city,'accBal': DEFAULT_BAL, 'rank': 0,'user_verify':"Yes",'userVal':DEFAULT_BAL}
                 database.child("users").child(uid).set(data)
                 auth.send_email_verification(user['idToken'])
                 return render(request,"thankyou.html")
@@ -123,7 +134,7 @@ def signUp(request):
 
                 user=auth.create_user_with_email_and_password(email,passw)
                 uid = user['localId']
-                data={'name':name,'email':email,'phone': phone, 'college':college,'city':city,'accBal': DEFAULT_BAL, 'rank': 0,'user_verify':"No"}
+                data={'name':name,'email':email,'phone': phone, 'college':college,'city':city,'accBal': DEFAULT_BAL, 'rank': 0,'user_verify':"No",'userVal':DEFAULT_BAL}
                 database.child("users").child(uid).set(data)
                 auth.send_email_verification(user['idToken'])
                 return render(request,"verification.html")
