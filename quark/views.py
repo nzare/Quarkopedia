@@ -197,3 +197,5 @@ def otp(request):
     return render(request,'otp.html')           
 def thankyou(request):
     return render(request,'thankyou.html')   
+def About(request):
+    return render(request,'About.html')   

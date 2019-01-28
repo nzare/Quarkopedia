@@ -1,0 +1,208 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>About</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+  <style>
+#more {display: none;}
+#mybtn {
+  
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 2px;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+#mybtn:hover {
+  background-color: #555;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 5px 5px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: none;
+  color: white;
+}
+
+/* Add a color to the active/current link */
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+ 
+</style>
+</head>
+<body>
+<button onclick="topFunction()" id="mybtn" title="Go to top"><i class="fa fa-angle-double-up" style="font-size:36px"></i></button>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+   
+    <ul class="nav navbar-nav">
+      <li style="float: left;"><img src="{% static 'image/logo.png' %}" style="height: 45px; width: 220px;"></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      
+      <li><a href="{% url 'signup' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      
+    </ul>
+  </div>
+</nav>
+
+  
+<div class="container">
+  <div class="col-lg-12">
+  <div class="jumbotron text-center" style="background-color: teal; color: white;">
+  <h2>Getting Started</h2>
+</div>
+ <I> <h3>
+  <b>
+Quarkopedia </b>is an online simulation trading game where you create and manage your own portfolio and compete with other players in a risk-free environment. Whether you're new to the stock markets or an experienced investor, this is a powerful tool for building skill, evaluating and tuning your strategy, and gaining important investing experience. Simply buy stocks to build your initial portfolio. Continue to track the market and keep an shuffle your portfolio to grab opportunities provided so as to maximize your gains. Access financial information on stocks to get better insight on its potential and fundamentals.
+</h3></I>
+<br>
+<h3 style="color: teal;"><I><b>The Challenge</b></I></h3>
+<p style="font-size: 20px;">Every challenger is assigned Rs 10,00,000 play money in the beginning. The objective is to maximize this amount by intelligently and smartly investing in the Stock Market. Each player is pit against each other and his/her performance determines how the person is doing via-a-vis others. Trade, learn and compete with the best! </p> <br>
+<h3 style="color: teal;"><I><b>The “BITS” essence</b></I></h3>
+<p style="font-size: 20px;">
+Quarkopedia is almost a new platform as it highlights the different courses offered by <b>Birla Institute of Technology, Goa</b>. The practical issues faced when a stock hits a circuit or the illiquidity of a stock etc are all captured and simulated so as to ensure a new experience of the markets with respect to the college courses. The Corporate Benefits as in Dividend, Bonus, Split, Mergers, De-Mergers etc are all also considered and applied. Also, very importantly, the order placed is only traded considering the prices received from the exchange after the placement of the order. In a 1 minute delayed price feed scenario the order gets transacted at the price received from the exchange after 1 minute. This ensures no manipulation by looking at the live prices and taking undue advantage in the challenge.<br>
+<b><br>
+Before you begin, it's important to read the About and Trading Rules. We would welcome your feedback and comment to make this simulation better. Hence, do report suggestions/bugs, if any, using the feedback form provided on the right hand side of the page.</b>
+
+</p>
+<br>
+<h3 style="color: teal;"><I><b>Rules</b></I></h3>
+<li style="font-size: 20px;">
+Quarkopedia is governed by game rules that you should be aware of to ensure you fully understand the online trading process and to make the most from this experience.
+</li> <br>
+<li style="font-size: 20px;">
+<b><u>Registration is a must:</u></b>
+Existing subscribers can use existing username, password. New visitors/users need to register. Registration is <b><span style="color: red;">FREE!</span></b>
+</li> <br>
+<li style="font-size: 20px;">
+<b><u>Exchange and prices:</u></b>
+Current Trading is with respect to the courses offered in Birla Institute of Technology, Goa.
+</li> <br>
+<li style="font-size: 20px;">
+<b><u>Trading Hours:</u></b>
+9:00 a.m. IST - 4:00 p.m. IST.</li> <br>
+
+<li style="font-size: 20px;">
+<b><u>Game Duration:</u></b>
+The game starts the very moment you register for the game. You are automatically placed in the contests running for 4 days.</li> <br>
+
+<li style="font-size: 20px;">
+<b><u>Operating Balance:</u></b>
+Starting balance is Rs 10,00,000 in cash.</li> <br>
+
+<li style="font-size: 20px;">
+<b><u>Ranking:</u></b>
+Your portfolios will be ranked against others. Ranking is considered only for players who have transacted a stock at least once. To view rankings, click Ranking in the menu. Ranks are decided based on highest value of portfolio.
+</li> <br>
+<li style="font-size: 20px;">
+<b><u>Market orders placed during market hours:</u></b>
+If you make a trade during market hours, your order will generally be confirmed 1-2 minutes after your order has been placed. This is to ensure fair play (explained in the fair play rule).
+</li> <br>
+<li style="font-size: 20px;">
+<b><u>Market Open Orders Placed During Market Hours and During Off Hours</u></b>
+If you place a market open order, the order will be not be executed until the market opens on the next trading day.
+</li> <br>
+<li style="font-size: 20px;">
+<b><u>Limit Orders Placed During Market Hours and During Off Hours</u></b>
+If you place a limit order the order is submitted to the order book, where it will wait for the market price to move up to your order price (if it is a sell order) or down (if it is a buy order).
+</li> <br>
+
+<li style="font-size: 20px;">
+<b><u>End of the Portfolio Value</u></b>
+Your final game ranking is dependent on the portfolio value at the end of the periods. At that point, your portfolio value is calculated from closing prices on the final day of your trading session added onto whatever uninvested cash you hold.
+</li> <br>
+<li style="font-size: 20px;">
+<b><span style="color: red;">Short Selling not allowed.<br></span>You cannot sell a stock that you do not hold.</b>
+</li> <br>
+
+<li style="font-size: 20px;">
+<b><u>Fair Play</u></b>
+<ol>Stock Prices delayed by 1-2 minutes.</ol>
+<ol>Orders (including market orders) will take 5-7 minutes to transact. This rule ensures Fair play. The order is matched with the price ticks received from the exchange after the timestamp of order placed.<span id="dots">...</span><span id="more">i.e., if an order is placed at 11:12 am then this order will be tried for execution on the prices received from the exchange on and after 11:12 am. Since the price feed is 1-2 minutes delayed in the system it would take similar time for a market order to get executed.
+</span><button onclick="myFunction()" id="myBtn" >Read more</button>
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("mybtn").style.display = "block";
+  } else {
+    document.getElementById("mybtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+</script>
+</ol>
+<li style="font-size: 20px;"><b><u>End of the Day:</u></b>
+Orders that remain un-executed till the closing of the day are flushed out i.e. deleted from the system. They appear in the history tab with the reason on why they could not be executed.
+</li> <br>
+ <li style="font-size: 20px;"><b><u>Volume:</u></b>
+The order will only transact to the extent of the volume of shares transacted as of that time in the market. Example, If you are interested in buying stock in Company A, and it has a trading volume of 1,000 shares at the time the user was placing a trade, you would be able to buy up to a maximum of 1,000 shares. If you place an order that exceeds the actual trading volume, it will partially fill the order to the maximum volume limit. The remaining shares will expire.
+</li> <br>
+  <li style="font-size: 20px;"><b><u>
+Circuit filter:</u></b>
+
+The system prevents a player from buying a stock if the stock has hit the upper circuit. Similarly it prevents a player from selling a stock hitting the lower circuit. Again, this is to make the simulation realistic and non-manipulative.
+
+</li> <br>
+
+
+</div>
+</div>
+
+</body>
+</html>
+

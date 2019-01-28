@@ -31,4 +31,5 @@ urlpatterns = [
     path('verification/otp/', views.otp, name='otp'),
     path('signUp/thankyou/', views.thankyou, name='thankyou'),
     path('otp/thankyou',views.thankyou,name='thankyou'),
+    path('About/',views.About,name='About'),
 ]
