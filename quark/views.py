@@ -7,7 +7,7 @@ from authy.api import AuthyApiClient
 from django.conf import settings
 config = {
 	
-	'apiKey': "AIzaSyAqsYNzM3h74CDciLhKvQXaph5-VcdeG-4",
+	'apiKey': "*****************************",
         'authDomain': "quark-o-pedia.firebaseapp.com",
         'databaseURL': "https://quark-o-pedia.firebaseio.com",
         'projectId': "quark-o-pedia",
