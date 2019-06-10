@@ -5,7 +5,7 @@
 # quark\urls.py: 15,16
 # quark\views.py: 1,2,4,7
 # quark\wsgi.py: 12
-Django == 2.1.5
+Django == 2.1.9
 
 # quark\views.py: 3
 Pyrebase == 3.0.27
